@@ -8,7 +8,7 @@ export class AppService {
 
 
   // colocar a api abaixo
-  private url = "https://swapi.dev/api/"
+  private url = "https://swapi.dev/api/ + people/1/"
 
   constructor(private http: HttpClient) {
 

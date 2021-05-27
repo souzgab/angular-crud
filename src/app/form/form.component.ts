@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-form',
@@ -29,6 +29,16 @@ export class FormComponent {
     firstName: '',
     lastName: ''
   })
+
+  application: any;
+  codigo: any;
+  nomeRetorno: any;
+
+
+  apps = [
+    {application: "FGTS", cod: 1, nomeRetorno: "xpto"},
+    {application: "Banco", cod: 2, nomeRetorno: "xpto"}
+  ]
   
 
   hasUnitNumber = false;
@@ -100,5 +110,9 @@ export class FormComponent {
   onSubmit(): void {
     //colocar aqui a chamada no back, para registrar as informações
     console.log(this.addressForm.value);
+  }
+
+  filtrarData() {
+    console.log(this.application, this.codigo, this.nomeRetorno)
   }
 }

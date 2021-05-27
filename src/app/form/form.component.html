@@ -58,3 +58,36 @@
   </mat-card>
 </form>
 
+
+<mat-card style="background-color: transparent; width: 1400px;">
+  <mat-card-header>
+    <mat-card-title>Filtrar por</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="row">
+      <div class="col">
+        <mat-form-field class="full-width">
+          <mat-select placeholder="Aplicação" [(ngModel)]="application">
+            <mat-option *ngFor="let app of apps" [value]="app.application">
+              {{ app.application }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="col">
+        <div class="flex-row">
+          <mat-form-field>
+            <input matInput placeholder="Codigo" [(ngModel)]="codigo">
+          </mat-form-field>
+          <mat-form-field style="width: 70%;">
+            <input matInput placeholder="Nome Retorno" [(ngModel)]="nomeRetorno">
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="filtrarData()">Filtrar</button>
+  </mat-card-actions>
+</mat-card>
+

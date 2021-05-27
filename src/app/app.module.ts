@@ -25,6 +25,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RegisterFormComponent } from './register-form/register-form.component';
+import { ApplicationFilterComponent } from './application-filter/application-filter.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,8 @@ import { RegisterFormComponent } from './register-form/register-form.component';
     MainNavComponent,
     MainTableComponent,
     FormComponent,
-    RegisterFormComponent
+    RegisterFormComponent,
+    ApplicationFilterComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +57,8 @@ import { RegisterFormComponent } from './register-form/register-form.component';
     MatInputModule,
     MatSelectModule,
     MatRadioModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
